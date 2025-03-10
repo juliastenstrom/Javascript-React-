@@ -1,0 +1,288 @@
+.sliding-background {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background: url("../sliding_background.svg") repeat;
+  animation: slide 30s linear infinite;
+  z-index: -10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes slide {
+  0%{ background-position: 0, 0;}
+
+  100%{ background-position: -425px, 0;}
+}
+body{
+  overflow: hidden;
+}
+.button{
+  background: url("../bear_play.svg") no-repeat;
+  height: 307px;
+  width: 205px;
+  display: flex;
+  justify-self: center;
+  
+}
+
+
+.image-button{
+  background: url("../Button.svg") no-repeat;
+  background-size: 50%;
+  position: fixed;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 100px; /* Adjust size */
+  height: 100px; /* Adjust size */
+  background-size: cover;
+
+}
+
+.pop1{ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.pop2{
+ background-color: pink;
+}
+
+.pop3{
+  font-size: 10px;
+  float: right;
+  margin-right: 20px;
+}
+
+#close-button{
+  position: absolute;
+  top: 10px; /* Distance from the top of the popup */
+  right: 10px; /* Distance from the right of the popup */
+  background: none;
+  border: none;
+  font-size: 20px; /* Size of the "X" */
+  color: #000; /* Color of the "X" */
+  cursor: pointer; /* Make it look clickable */
+  outline: none; /* Remove outline when clicked */
+  display:none;
+}
+.cloud1{
+  position: fixed;
+    height: 150%;
+    top: 10%;
+    z-index: 1000;
+    left: 100%;
+}
+
+.cloud1.animate{
+  animation: slide-in 3s ease-out forwards; 
+}
+
+@keyframes slide-in {
+  0% {
+      left: 100%; 
+  }
+  33%{
+    left: -50%;
+  }
+  66%{
+    left: -50%;
+  }
+  100% {
+      left: 100%; 
+  }
+}
+
+.cloud2{
+  position: fixed;
+    height: 150%;
+    top: -10%;
+    z-index: 999;
+    left: -350%;
+}
+
+.cloud2.animate{
+  animation: slide-in1 3s ease-out forwards; 
+}
+
+
+@keyframes slide-in1 {
+  0% {
+      left: -350%; 
+  }
+  33%{
+    left: -80%;
+  }
+  66%{
+    left: -80%;
+  }
+  100% {
+      left: -350%; 
+  }
+}
+
+.cloud3{
+  position: fixed;
+    height: 150%;
+    top: -50%;
+    z-index: 998;
+    left: 100%;
+}
+
+.cloud3.animate{
+  animation: slide-in3 3s ease-out forwards; 
+}
+
+
+@keyframes slide-in3 {
+  0% {
+      left: 100%; 
+  }
+  33%{
+    left: -80%;
+  }
+  66% {
+      left: -80%; 
+  }
+  100%{
+    left: 100%;
+  }
+}
+
+.cloud11{
+  position: fixed;
+    height: 150%;
+    top: 10%;
+    z-index: 1000;
+    left: -50%;
+    animation: slide-out1 1s ease-out forwards; 
+}
+
+@keyframes slide-out1 {
+  0% {
+      left: -50%; 
+  }
+  100%{
+    left: 100%;
+  }
+}
+
+.cloud22{
+  position: fixed;
+    height: 150%;
+    top: -10%;
+    z-index: 999;
+    left: -80%;
+    animation: slide-out2 1s ease-out forwards; 
+}
+@keyframes slide-out2 {
+  0% {
+      left: -80%; 
+  }
+  100%{
+    left: -350%;
+  }
+}
+.cloud33{
+  position: fixed;
+    height: 150%;
+    top: -50%;
+    z-index: 998;
+    left: -80%;
+    animation: slide-out3 1s ease-out forwards; 
+}
+@keyframes slide-out3 {
+  0% {
+      left: -80%; 
+  }
+  100%{
+    left: 100%;
+  }
+}
+.cafeb1{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3px);
+}
+.slide1{
+  animation: transform1 3s ease-out forwards;
+}
+@keyframes transform1{
+  0%{
+    left: 0;
+  }
+  100%{
+    left: -100%;
+  }
+}
+
+.cafeb2{
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3px);
+}
+.cafeb3{
+  position: fixed;
+  top: 0;
+  left: -200%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3px);
+}
+.s3{
+  animation: t3 3s ease-out forwards;
+}
+@keyframes t3{
+  0%{
+    left: -100%;
+  }
+  100%{
+    left: -200%;
+  }
+}
+.s4{
+  animation: t4 3s ease-out forwards;
+  position: absolute;
+}
+@keyframes t4 {
+  0%{
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  100%{
+    transform: translateX(-50%);
+    left: -100%;
+  }
+}
+.s5{
+  animation: t5 3s ease-out forwards;
+}
+@keyframes t5 {
+  0%{
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  100%{
+    transform: translateX(-50%);
+    left: -100%;
+  }
+}
